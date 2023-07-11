@@ -1,0 +1,23 @@
+:root {
+  --main-ff: "Fraunces", "New Times Roman", serif;
+  --secondary-ff: "Barlow", "Arial", sans-serif;
+  --main-fw: 900;
+  --global-fw: 400;
+  --main-fz: 24px;
+  --main-color: #fefcf7;
+  --secondary-color: #333048;
+  --extra-color: #83888f;
+  --bg-color: #0e8784;
+  --extra-bg-color: #fdd6ba;
+}
+
+$main-ff: var(--main-ff);
+$secondary-ff: var(--secondary-ff);
+$main-fw: var(--main-fw);
+$global-fw: var(--global-fw);
+$main-fz: var(--main-fz);
+$main-color: var(--main-color);
+$secondary-color: var(--secondary-color);
+$extra-color: var(--bg-color);
+$bg-color: var(--bg-color);
+$extra-bg-color: var(--extra-bg-color);

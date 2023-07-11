@@ -1,5 +1,26 @@
+@use "./variables" as v;
+
 /* General styles */
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    // font-family: serif;
+    // font-size: ;
+    // font-weight: ;
+    // background-color: ;
+}
+
+img {
+    display: block;
+    height: auto;
 }
