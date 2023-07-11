@@ -3,24 +3,39 @@
 /* General styles */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    // font-family: serif;
-    // font-size: ;
-    // font-weight: ;
-    // background-color: ;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: v.$main-ff;
+  font-weight: v.$main-fw;
+  background-color: v.$main-color;
 }
 
 img {
+  display: block;
+  height: auto;
+}
+
+/* Sticky footer */
+
+.site-main {
+  flex-grow: 1;
+}
+
+.open .navigation {
     display: block;
-    height: auto;
+}
+
+.open .site-header__menu {
+    background-image: url("../images/menuclose.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }

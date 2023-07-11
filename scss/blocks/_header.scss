@@ -1,0 +1,125 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+/* Site header styles begin */
+
+/* Mobile firts */
+
+.site-header {
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+.site-header__inner {
+  @include m.layout;
+}
+
+.site-header__menu {
+  width: 16px;
+  height: 15px;
+  @include m.unstyled-btn(0, transparent);
+  background-image: url("../../images/menu.svg");
+}
+
+.navigation {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  z-index: 5;
+  display: none;
+  width: 100%;
+  height: calc(100vh - 90px);
+  background-image:linear-gradient(0, rgba(254, 252, 247, 0.504981) 0%, #FEFCF7 55.94%);
+}
+
+.navigation__list {
+  margin-top: 40px;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.navigation__item {
+  text-align: center;
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.navigation__link {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 32px;
+  color: v.$secondary-color;
+  text-decoration: none;
+}
+
+@include m.responsive(550px) {
+  .site-header__menu {
+    display: none;
+  }
+  
+  .navigation {
+    position: static;
+    display: block;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+  }
+  
+  .navigation__list{
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+    margin-top: 0;
+  }
+  
+  .navigation__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .navigation__link {
+    font-family: v.$secondary-ff;
+    font-size: 12px;
+    letter-spacing: 0.9230769276618958px;
+    text-decoration: none;
+    color: v.$extra-color;
+  }
+}
+
+@include m.responsive(768px) {
+  .site-header {
+    padding-top: 40px;
+    padding-bottom: 53px;
+  }
+  
+  .logo__img {
+    width: 236px;
+    height: 26px;
+  }
+}
+
+@include m.responsive(1024px) {
+  .site-header {
+    padding: 44px 0;
+  }
+  
+  .logo {
+    transition: opacity 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 0.6;
+    }
+  }
+  
+  .navigation__link {
+    transition: color  0.3s ease;
+    &:hover {
+      color: v.$secondary-color;
+    }
+  }
+}
+
+/* Site header styles end */

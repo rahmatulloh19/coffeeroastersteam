@@ -11,6 +11,12 @@
   list-style: none;
 }
 
+@mixin unstyled-btn($p, $bgc) {
+  padding: $p;
+  border: none;
+  background-color: $bgc;
+}
+
 @mixin default-text($mb, $fz:16px, $fw:400, $lh:normal, $lt:normal) {
   margin-top: 0;
   margin-bottom: $mb;
