@@ -43,11 +43,25 @@
   border-radius: 6px;
 }
 
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  
+  .hero__inner {
+    background-image: url("../../images/herobg@2x.png");
+  }
+  
+} 
+
 @include m.responsive(375px) {
   .hero__title {
     font-size: 40px;
   }
-
+  
   .hero__desc {
     font-size: 15px;
   }
@@ -58,6 +72,20 @@
     padding: 104px 58px;
     background-image: url("../../images/herobgtablet.png");
   }
+  
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { 
+    
+    .hero__inner {
+      background-image: url("../../images/herobgtablet@2x.png");
+    }
+    
+  } 
 }
 
 @include m.responsive(768px) {
@@ -67,7 +95,7 @@
   .hero__inner {
     text-align: left;
   }
-
+  
   .hero__text-wrapper {
     margin-left: 0;
   }
@@ -82,26 +110,26 @@
   .hero {
     padding-bottom: 136px;
   }
-
+  
   .hero__inner {
     padding: 117px 85px;
     background-image: url("../../images/herobgdesktop.png");
   }
-
+  
   .hero__text-wrapper {
     max-width: 493px;
   }
-
+  
   .hero__title {
     margin-bottom: 32px;
     font-size: 72px;
     line-height: 72px;
   }
-
+  
   .hero__desc-wrapper {
     max-width: 375px;
   }
-
+  
   .hero__desc {
     margin-bottom: 56px;
   }
@@ -114,5 +142,19 @@
       opacity: 0.6;
     }
   }
+  
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { 
+    
+    .hero__inner {
+      background-image: url("../../images/herobgdesktop@2x.png");
+    }
+
+  } 
 }
 /* Hero styles finished */
