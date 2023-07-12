@@ -391,6 +391,125 @@ img {
   }
 }
 /* Site header styles end */
+/* Hero styles started */
+.hero {
+  padding-bottom: 120px;
+}
+
+.hero__inner {
+  padding: 100px 24px;
+  background-image: url("../../images/herobg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: var(--main-color);
+  text-align: center;
+}
+
+.hero__text-wrapper {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 32px;
+  font-weight: var(--main-fw);
+  line-height: 40px;
+  letter-spacing: normal;
+}
+
+.hero__desc {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: normal;
+  font-family: var(--secondary-ff);
+  opacity: 0.8;
+}
+
+.hero__more {
+  display: inline-block;
+  min-width: 217px;
+  padding: 15px 16px 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 25px;
+  letter-spacing: normal;
+  color: #FEFCF7;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--bg-color);
+  border-radius: 6px;
+}
+
+@media only screen and (min-width: 375px) {
+  .hero__title {
+    font-size: 40px;
+  }
+  .hero__desc {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .hero__inner {
+    padding: 104px 58px;
+    background-image: url("../../images/herobgtablet.png");
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding-bottom: 144px;
+  }
+  .hero__inner {
+    text-align: left;
+  }
+  .hero__text-wrapper {
+    margin-left: 0;
+  }
+  .hero__title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .hero {
+    padding-bottom: 136px;
+  }
+  .hero__inner {
+    padding: 117px 85px;
+    background-image: url("../../images/herobgdesktop.png");
+  }
+  .hero__text-wrapper {
+    max-width: 493px;
+  }
+  .hero__title {
+    margin-bottom: 32px;
+    font-size: 72px;
+    line-height: 72px;
+  }
+  .hero__desc-wrapper {
+    max-width: 375px;
+  }
+  .hero__desc {
+    margin-bottom: 56px;
+  }
+  .hero__more {
+    -webkit-transition: background-color 0.3s ease, opacity 0.3s;
+    transition: background-color 0.3s ease, opacity 0.3s;
+  }
+  .hero__more:hover {
+    background-color: #66d2cf;
+  }
+  .hero__more:active {
+    opacity: 0.6;
+  }
+}
+/* Hero styles finished */
 /* Site footer styles begin */
 .site-footer {
   padding-bottom: 72px;
