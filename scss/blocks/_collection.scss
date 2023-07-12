@@ -155,6 +155,10 @@
   .collection__item--danche::before {
     background-image: url("../../images/danchetablet.png");
   }
+
+  .collection__subtitle {
+    margin-bottom: 24px;
+  }
   
   @media
   only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -194,7 +198,7 @@
   }
   
   .collection__shadow {
-    top: -23%;
+    top: -20%;
     height: 196px;
   }
   
@@ -217,11 +221,56 @@
     &::before {
       width: 255px;
       height: 193px;
+      margin-bottom: 72px;
+      background-image: url("../../images/danchedesktop.png");
     }
+  }
+
+  .collection__item--planto::before {
+    background-image: url("../../images/planaltodesktop.png");
+  }
+
+  .collection__item--piccolo::before {
+    background-image: url("../../images/piccollodesktop.png");
+  }
+
+  .collection__item--danche::before {
+    background-image: url("../../images/danchedesktop.png");
   }
   
   .collection__desc-wrapper {
     max-width: 245px;
   }
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { 
+    
+    
+    .collection__item::before {
+      background-image: url("../../images/grandesktop@2x.png");
+      background-size: contain;
+    }
+
+    .collection__item--planto::before {
+      background-image: url("../../images/planaltodesktop@2x.png");
+      background-size: contain;
+    }
+    
+    .collection__item--piccolo::before {
+      background-image: url("../../images/piccollodesktop@2x.png");
+      background-size: contain;
+    }
+    
+    .collection__item--danche::before {
+      background-image: url("../../images/danchedesktop@2x.png");
+      background-size: contain;
+    }
+    
+  } 
 }
 /* Collection section styles finished */
