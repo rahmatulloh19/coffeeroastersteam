@@ -525,6 +525,112 @@ img {
   }
 }
 /* Hero styles finished */
+.hero-about {
+  padding-bottom: 120px;
+}
+
+.hero-about__wrapper {
+  padding: 111px 24px 87px 24px;
+  text-align: center;
+  background-image: url(../../images/about-page/hero-about.png);
+  background-size: 100% 100%;
+}
+
+.hero-about__title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 28px;
+  letter-spacing: normal;
+  color: var(--main-color);
+  font-family: var(--main-ff);
+}
+
+.hero-about__desc-wrapper {
+  max-width: 279px;
+  margin: 0 auto;
+}
+
+.hero-about__desc {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: normal;
+  font-family: var(--secondary-ff);
+  color: var(--main-color);
+  opacity: 0.8;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .hero-about__wrapper {
+    background-image: url(../../images/about-page/hero-about@2x.png);
+  }
+}
+/* media 375px */
+@media only screen and (min-width: 375px) {
+  .hero-about__title {
+    font-size: 28px;
+  }
+  .hero-about__desc {
+    font-size: 15px;
+  }
+}
+/* media min-550 to max-767 */
+@media only screen and (min-width: 550px) {
+  .hero-about {
+    padding-top: 13px;
+    padding-bottom: 144px;
+  }
+  .hero-about__wrapper {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    padding-left: 58px;
+    text-align: left;
+    background-image: url(../../images/about-page/hero-about-tablet.png);
+  }
+  .hero-about__title {
+    font-size: 32px;
+  }
+  .hero-about__desc-wrapper {
+    max-width: 330px;
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 550px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 550px) and (min-device-pixel-ratio: 2), only screen and (min-width: 550px) and (min-resolution: 192dpi), only screen and (min-width: 550px) and (min-resolution: 2dppx) {
+  .hero-about__wrapper {
+    background-image: url(../../images/about-page/hero-about-tablet@2x.png);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero-about__desc-wrapper {
+    max-width: 398px;
+    margin-left: 0;
+  }
+}
+/* media 1024   */
+@media only screen and (min-width: 1024px) {
+  .hero-about__wrapper {
+    padding: 137px 0 137px 85px;
+    background-image: url(../../images/about-page/hero-about-desc.png);
+  }
+  .hero-about__title {
+    font-size: 40px;
+  }
+  .hero-about__desc-wrapper {
+    max-width: 445px;
+  }
+  .hero-about__desc {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (min-resolution: 192dpi), only screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+  .hero-about__wrapper {
+    background-image: url(../../images/about-page/hero-about-desc@2x.png);
+  }
+}
 /* Site footer styles begin */
 .site-footer {
   padding-bottom: 72px;
