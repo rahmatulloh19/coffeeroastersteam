@@ -108,7 +108,7 @@ only screen and (                min-resolution: 2dppx) {
 
 @include m.responsive(1024px) {
   .hero {
-    padding-bottom: 136px;
+    padding-bottom: 262px;
   }
   
   .hero__inner {
