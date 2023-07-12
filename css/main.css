@@ -686,6 +686,11 @@ img {
     font-size: 15px;
   }
 }
+@media only screen and (min-width: 550px) {
+  .commit__img {
+    height: 400px;
+  }
+}
 @media only screen and (min-width: 660px) {
   .commit__wrapper {
     display: -webkit-box;
@@ -701,8 +706,10 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 69px 48px;
-    text-align: center;
+    -webkit-column-gap: 69px;
+       -moz-column-gap: 69px;
+            column-gap: 69px;
+    text-align: left;
   }
   .commit__title {
     line-height: 40px;
@@ -726,8 +733,10 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 69px 48px;
-    text-align: center;
+    -webkit-column-gap: 69px;
+       -moz-column-gap: 69px;
+            column-gap: 69px;
+    text-align: left;
   }
   .commit__title {
     line-height: 48px;
@@ -741,8 +750,9 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -750,7 +760,9 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 69px 48px;
+    -webkit-column-gap: 125px;
+       -moz-column-gap: 125px;
+            column-gap: 125px;
     text-align: left;
   }
   .commit__content-wrapper {
