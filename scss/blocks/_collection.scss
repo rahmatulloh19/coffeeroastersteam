@@ -1,0 +1,227 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+/* Collection section styles started */
+
+.collection {
+  position: relative;
+  padding-bottom: 120px;
+  color: v.$secondary-color;
+  text-align: center;
+}
+
+.collection__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 72px;
+  background: linear-gradient(180deg, rgba(254, 252, 247, 0) 0%, #FEFCF7 100%);
+}
+
+.collection__title {
+  @include m.default-text(13px, 38px, 900, 72px);
+  color: v.$extra-color;
+}
+
+.collection__list {
+  @include m.unstyled-list;
+}
+
+.collection__item {
+  padding: 24px;
+  &:first-child {
+    padding-top: 13px;
+  }
+  &::before {
+    margin: 0 auto 24px;
+    @include m.psevdo-el(200px, 151px, "../../images/gran.png")
+  }
+}
+
+.collection__item--planto::before {
+  background-image: url("../../images/planto.png");
+}
+
+.collection__item--piccolo::before {
+  background-image: url("../../images/piccollo.png");
+}
+
+.collection__item--danche::before {
+  background-image: url("../../images/danche.png");
+}
+
+.collection__subtitle {
+  @include m.default-text(16px, 24px, 900, 32px);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 32px;
+}
+
+.collection__desc {
+  @include m.default-text(0, 15px, $lh:25px);
+  font-family: v.$secondary-ff;
+}
+
+@include m.responsive(375px) {
+  .collection__title {
+    font-size: 40px;
+  }
+  
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { 
+    
+    
+    .collection__item::before {
+      background-image: url("../../images/gran@2x.png");
+      background-size: contain;
+    }
+
+    .collection__item--planto::before {
+      background-image: url("../../images/planto@2x.png");
+      background-size: contain;
+    }
+    
+    .collection__item--piccolo::before {
+      background-image: url("../../images/piccollo@2x.png");
+      background-size: contain;
+    }
+    
+    .collection__item--danche::before {
+      background-image: url("../../images/danche@2x.png");
+      background-size: contain;
+    }
+    
+  } 
+}
+
+@include m.responsive(550px) {
+  .collection {
+    padding-bottom: 144px;
+  }
+}
+
+@include m.responsive(768px) {
+  .collection {
+    text-align: left;
+  }
+  
+  .collection__shadow {
+    z-index: -1;
+    top: -5%;
+    height: 118px;
+  }
+  
+  .collection__title {
+    position: absolute;
+    top: -18px;
+    left: calc(50%);
+    z-index: -2;
+    width: 100%;
+    font-size: 96px;
+    line-height: 72px;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  
+  .collection__item {
+    display: flex;
+    align-items: center;
+    column-gap: 36px;
+    max-width: 537px;
+    margin: 0 auto;
+    &::before {
+      width: 64%;
+      height: 193px;
+      margin: 0;
+      background-image: url("../../images/grantablet.png");
+    }
+  }
+  
+  .collection__item--planto::before {
+    background-image: url("../../images/plantotablet.png");
+  }
+  
+  .collection__item--piccolo::before {
+    background-image: url("../../images/piccollotablet.png");
+  }
+  
+  .collection__item--danche::before {
+    background-image: url("../../images/danchetablet.png");
+  }
+  
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { 
+    
+    
+    .collection__item::before {
+      background-image: url("../../images/grantablet@2x.png");
+      background-size: contain;
+    }
+
+    .collection__item--planto::before {
+      background-image: url("../../images/plantotablet@2x.png");
+      background-size: contain;
+    }
+    
+    .collection__item--piccolo::before {
+      background-image: url("../../images/piccollotablet@2x.png");
+      background-size: contain;
+    }
+    
+    .collection__item--danche::before {
+      background-image: url("../../images/danchetablet@2x.png");
+      background-size: contain;
+    }
+    
+  } 
+}
+
+@include m.responsive(1200px) {
+  .collection {
+    padding-bottom: 200px;
+  }
+  
+  .collection__shadow {
+    top: -23%;
+    height: 196px;
+  }
+  
+  .collection__title {
+    font-size: 150px;
+  }
+  
+  .collection__list {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    max-width: 1111px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .collection__item {
+    display: block;
+    padding: 0;
+    &::before {
+      width: 255px;
+      height: 193px;
+    }
+  }
+  
+  .collection__desc-wrapper {
+    max-width: 245px;
+  }
+}
+/* Collection section styles finished */
