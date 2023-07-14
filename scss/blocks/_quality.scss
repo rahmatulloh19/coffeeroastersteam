@@ -6,7 +6,7 @@
 }
 .quality__wrapper {
     padding: 0 24px 61px 24px;
-    background-image: url(../../images/about-page/quality/qualitybg.png);
+    background-image: url("../../images/about-page/quality/qualitybg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -15,7 +15,6 @@
     top: -64px;
     width: 224px;
     transform: translateX(-50%);
-    // width: 279px;
 }
 .quality__content {
     max-width: 279px;
@@ -27,14 +26,12 @@
     @include m.default-text(24px, 24px, 900, 28px, normal);
     color: v.$main-color;
     font-family: v.$main-ff;
-    // font-size: 28px;
 }
 .quality__desc {
     @include m.default-text( 0, 13px, 400, 25px, normal);
     color: v.$main-color;
     font-family: v.$secondary-ff;
     opacity: 0.8;
-    // font-size: 15px;
 }
 
 @media
@@ -46,7 +43,7 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
     
     .hero-about__wrapper {
-        background-image: url(../../images/about-page/quality/qualitybg@2x.png);
+        background-image: url("../../images/about-page/quality/qualitybg@2x.png");
     }
 } 
 
@@ -67,7 +64,7 @@ only screen and (                min-resolution: 2dppx) {
 @include m.responsive(550px) {
     .quality__wrapper {
         padding: 224px 74px 67px 74px;
-        background-image: url(../../images/about-page/quality/qualitybg-tablet.png);
+        background-image: url("../../images/about-page/quality/qualitybg-tablet.png");
     }
     .quality__img {
         width: 400px;
@@ -92,7 +89,7 @@ only screen and (                min-resolution: 2dppx) {
     only screen and (                min-resolution: 2dppx) { 
         
         .quality__wrapper {
-            background-image: url(../../images/about-page/quality/qualitybg-tablet@2x.png);
+            background-image: url("../../images/about-page/quality/qualitybg-tablet@2x.png");
         }
     }
 }
@@ -114,7 +111,7 @@ only screen and (                min-resolution: 2dppx) {
 @include m.responsive(992px) {
     .quality__wrapper {
         padding: 100px 85px 176px 85px;
-        background-image: url(../../images/about-page/quality/qualitybg-desc.png);
+        background-image: url("../../images/about-page/quality/qualitybg-desc.png");
     }
     .quality__content {
         text-align: left;
@@ -146,7 +143,7 @@ only screen and (                min-resolution: 2dppx) {
     only screen and (                min-resolution: 2dppx) { 
         
         .quality__wrapper {
-            background-image: url(../../images/about-page/quality/qualitybg-desc@2x.png);
+            background-image: url("../../images/about-page/quality/qualitybg-desc@2x.png");
         }
     }
 }
