@@ -1361,6 +1361,7 @@ img {
     padding: 100px 85px 0;
   }
   .choose__bg {
+    max-width: 1280px;
     height: 585px;
   }
   .choose__title {
@@ -1434,6 +1435,8 @@ img {
   }
 }
 /* Section choose styles finished */
+/* Works section started */
+/* Works section finished */
 /* Site footer styles begin */
 .site-footer {
   padding-bottom: 72px;
