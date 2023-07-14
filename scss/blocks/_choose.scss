@@ -1,0 +1,216 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+/* Section choose styles started */
+.choose {
+  position: relative;
+  padding-bottom: 120px;
+  color: v.$main-color;
+  text-align: center;
+}
+
+.choose__bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  width: calc(100% - 48px);
+  height: 950px;
+  background-color: #2c343e;
+  border-radius: 10px;
+  transform: translateX(-50%);
+}
+
+.choose__inner {
+  padding: 64px 24px 0;
+  background-repeat: no-repeat;
+  background-size: 100% calc(100% - 519px);
+  border-radius: 10px;
+}
+
+.choose__text-content {
+  max-width: 494px;
+  margin: 0 auto;
+}
+
+.choose__title {
+  @include m.default-text(24px, 27px, 900);
+}
+
+.choose__text-desc {
+  @include m.default-text(64px, 15px, $lh:25px);
+  font-family: v.$secondary-ff;
+  opacity: 0.8;
+}
+
+
+.choose__list {
+  @include m.unstyled-list;
+}
+
+.choose__item {
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 72px 12px 51px;
+  background-color: v.$bg-color;
+  border-radius: 8px;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  &::before {
+    margin: 0 auto 56px;
+    @include m.psevdo-el(72px, 72px, "../../images/coffee.svg");
+  }
+}
+
+.choose__item--prize::before {
+  background-image: url("../../images/prize.svg");
+}
+
+.choose__item--truck::before {
+  height: 50px;
+  margin-bottom: 67px;
+  background-image: url("../../images/truck.svg");
+}
+
+.choose__subtitle {
+  @include m.default-text(24px, 21px, 900, 32px);
+}
+
+.choose__desc-wrapper {
+  max-width: 212px;
+  margin: 0 auto;
+}
+
+.choose__desc {
+  @include m.default-text(0, 15px, $lh:25px);
+  font-family: v.$secondary-ff;
+}
+
+@include m.responsive(375px) {
+  .choose__bg {
+    height: 890px;
+  }
+  
+  .choose__title {
+    font-size: 28px;
+  }
+  
+  .choose__subtitle {
+    font-size: 24px;
+  }
+  .choose__desc {
+    font-size: 16px;
+  }
+}
+
+@include m.responsive(768px) {
+  .choose__inner {
+    padding: 56px 74px 0;
+  }
+  
+  .choose__bg {
+    height: 637px;
+    background-color: #282f38;
+  }
+  
+  .choose__title {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  
+  .choose__text-desc {
+    margin-bottom: 70px;
+  }
+  
+  .choose__item {
+    display: flex;
+    align-items: center;
+    max-width: 690px;
+    margin: 0 auto;
+    text-align: left;
+    &::before {
+      width: 50%;
+      margin: 0;
+    }
+  }
+  
+  .choose__item--prize::before {
+    width: 48%;
+  }
+  
+  .choose__item--truck::before {
+    width: 44%;
+  }
+  
+  .choose__subtitle {
+    margin-bottom: 16px;
+  }
+  
+  .choose__desc-wrapper {
+    max-width: fit-content;
+  }
+}
+
+@include m.responsive(1024px) {
+  .choose__inner {
+    padding: 100px 85px 0;
+  }
+
+  .choose__bg {
+    height: 585px;
+  }
+  
+  .choose__title {
+    margin-bottom: 32px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+  
+  .choose__text-desc {
+    margin-bottom: 86px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .choose__list {
+    @include m.layout;
+    align-items: stretch;
+    column-gap: 30px; 
+  }
+  
+  .choose__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    padding: 72px 48px 48px;
+    text-align: center;
+    flex-shrink: 1;
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+    &::before {
+      width: 72px;
+      margin: 0 auto 56px;
+    }
+  }
+
+  .choose__item--truck::before {
+    margin-bottom: 67px;
+  }
+  
+  .choose__item-inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .choose__subtitle {
+    flex-grow: 1;
+    margin-bottom: 24px;
+  }
+
+
+}
+
+/* Section choose styles finished */
