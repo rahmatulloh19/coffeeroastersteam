@@ -1039,15 +1039,13 @@ img {
 }
 
 .quality__wrapper {
-  position: relative;
-  padding: 142px 24px 61px 24px;
+  padding: 0 24px 61px 24px;
   background-image: url(../../images/about-page/quality/qualitybg.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 .quality__img {
-  position: absolute;
   left: 50%;
   top: -64px;
   width: 224px;
