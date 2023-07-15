@@ -1049,8 +1049,6 @@ img {
   left: 50%;
   top: -64px;
   width: 224px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 .quality__content {

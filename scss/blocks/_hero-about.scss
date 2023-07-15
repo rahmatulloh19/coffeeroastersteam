@@ -14,7 +14,6 @@
     @include m.default-text (24px, 24px, 900, 28px);
     color: v.$main-color;
     font-family: v.$main-ff;
-    // font-size: 28px;
 }
 .hero-about__desc-wrapper {
     max-width: 279px;
