@@ -1,2 +1,108 @@
 @use "../variables" as v;
 @use "../mixins" as m;
+
+.country {
+    padding-bottom: 120px;
+}
+.country__wrapper {
+    text-align: center;
+}
+.country__title {
+    @include m.default-text(72px, 24px, 900, 32px, normal);
+    color: v.$extra-color;
+    font-family: v.$main-ff;
+}
+.country__list {
+    @include m.unstyled-list ;
+}
+.country__item {
+    max-width: 320px;
+    margin: 0 auto;
+    &:not(:last-child) {
+        margin-bottom: 80px;
+    }
+}
+.country__item--uk::before {
+    @include m.psevdo-el(41px, 49px, "../../images/about-page/quality/uk.svg", center);
+    margin: 0 auto;
+    margin-bottom: 47px;
+}
+.country__item--canada::before {
+    @include m.psevdo-el(51px, 50px, "../../images/about-page/quality/canada.svg", center);
+    margin: 0 auto;
+    margin-bottom: 47px;
+}
+.country__item--aus::before {
+    @include m.psevdo-el(49px, 44px, "../../images/about-page/quality/aus.svg", center);
+    margin: 0 auto;
+    margin-bottom: 47px;
+}
+.country__item-title {
+    @include m.default-text(22px, 28px, 900, 36px, normal);
+    font-family: v.$main-ff;
+    color: v.$secondary-color;
+}
+.country__address {
+    font-style: normal;
+}
+
+.country__item-span {
+    display: block;
+    text-decoration: none;
+    font-family: v.$secondary-ff;
+    font-style: normal;
+    line-height: 26px;
+    font-weight: 400;
+    color: v.$secondary-color;
+}
+
+/* media 550px  */
+@include m.responsive(768px) {
+    .country {
+        padding-bottom: 144px;
+    }
+    .country__wrapper {
+        text-align: left;
+    }
+    .country__list {
+        @include m.layout(flex-start);
+        flex-direction: row;
+        column-gap: 10px;
+    }
+    .country__item {
+        min-width: 223px;
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+        &::before {
+            margin-bottom: 48px;
+            margin-left: 0;
+        }
+    }
+    .country__item-title {
+        margin-bottom: 21px;
+        font-size: 24px;
+    }
+    .country__address {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+@include m.responsive(992px){
+    .country {
+        padding-bottom: 168px;
+    }
+    .country__list{
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 95px;
+    }
+    .country__item {
+        max-width: 285px;
+    }
+    .country__item-title {
+        margin-bottom: 24px;
+        font-size: 32px;
+    }
+}
