@@ -105,6 +105,10 @@
 }
 
 @include m.responsive(768px) {
+  .choose {
+    padding-bottom: 144px;
+  }
+  
   .choose__inner {
     padding: 56px 74px 0;
   }

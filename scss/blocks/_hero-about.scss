@@ -7,14 +7,13 @@
 .hero-about__wrapper {
     padding: 111px 24px 87px 24px;
     text-align: center;
-    background-image: url(../../images/about-page/hero-about.png);
+    background-image: url("../../images/about-page/hero-about.png");
     background-size: 100% 100%;
 }
 .hero-about__title {
     @include m.default-text (24px, 24px, 900, 28px);
     color: v.$main-color;
     font-family: v.$main-ff;
-    // font-size: 28px;
 }
 .hero-about__desc-wrapper {
     max-width: 279px;
@@ -37,7 +36,7 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
     
     .hero-about__wrapper {
-        background-image: url(../../images/about-page/hero-about@2x.png);
+        background-image: url("../../images/about-page/hero-about@2x.png");
     }
 } 
 
@@ -61,7 +60,7 @@ only screen and (                min-resolution: 2dppx) {
         padding-bottom: 118px;
         padding-left: 58px;
         text-align: left;
-        background-image: url(../../images/about-page/hero-about-tablet.png);
+        background-image: url("../../images/about-page/hero-about-tablet.png");
     }
     .hero-about__title {
         font-size: 32px;
@@ -79,7 +78,7 @@ only screen and (                min-resolution: 2dppx) {
     only screen and (                min-resolution: 2dppx) { 
         
         .hero-about__wrapper {
-            background-image: url(../../images/about-page/hero-about-tablet@2x.png);
+            background-image: ("../../images/about-page/hero-about-tablet@2x.png");
         }
     }
 }
@@ -93,7 +92,7 @@ only screen and (                min-resolution: 2dppx) {
 @include m.responsive(1024px) {
     .hero-about__wrapper {
         padding: 137px 0 137px 85px;
-        background-image: url(../../images/about-page/hero-about-desc.png);
+        background-image: url("../../images/about-page/hero-about-desc.png");
     }
     .hero-about__title {
         font-size: 40px;
@@ -114,7 +113,7 @@ only screen and (                min-resolution: 2dppx) {
     only screen and (                min-resolution: 2dppx) { 
         
         .hero-about__wrapper {
-            background-image: url(../../images/about-page/hero-about-desc@2x.png);
+            background-image: url("../../images/about-page/hero-about-desc@2x.png");
         }
     }
 }
