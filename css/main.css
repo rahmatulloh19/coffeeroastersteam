@@ -160,7 +160,9 @@ template {
 
 [hidden] {
   display: none;
-} /* Font families */
+}
+
+/* Font families */
 @font-face {
   font-family: "Fraunces";
   font-weight: 900;
@@ -1087,7 +1089,7 @@ img {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .hero-about__wrapper {
+  .quality__wrapper {
     background-image: url(../../images/about-page/quality/qualitybg@2x.png);
   }
 }
