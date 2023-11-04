@@ -1,0 +1,130 @@
+@use "../mixins" as m;
+
+/* Plan main styles begin */
+/* Plan hero styles started */
+
+.hero-plan {
+	padding-bottom: 120px;
+}
+
+.hero-plan__inner {
+	padding: 100px 24px 136px;
+	background-image: url("../../images/plan/hero.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+.hero-plan__text-wrapper {
+	max-width: 399px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.hero-plan__title {
+	@include m.default-text(22px, 33px, 900, 100%);
+}
+
+.hero-plan__desc {
+	@include m.default-text(0, 11px, $lh: 166%);
+	font-family: "Barlow";
+	opacity: 0.8;
+}
+
+/* Retina background images */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min--moz-device-pixel-ratio: 2),
+	only screen and (-o-min-device-pixel-ratio: 2/1),
+	only screen and (min-device-pixel-ratio: 2),
+	only screen and (min-resolution: 192dpi),
+	only screen and (min-resolution: 2dppx) {
+	/* Retina-specific stuff here */
+
+	.hero-plan__inner {
+		background-image: url("../../images/plan/hero@2x.png");
+	}
+}
+
+@include m.responsive(375px) {
+	.hero-plan__title {
+		font-size: 40px;
+	}
+
+	.hero-plan__desc {
+		font-size: 15px;
+	}
+}
+
+@include m.responsive(550px) {
+	.hero-plan__inner {
+		padding: 127px 58px;
+		background-image: url("../../images/plan/herotablet.png");
+	}
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (min--moz-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-device-pixel-ratio: 2),
+		only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx) {
+		/* Retina-specific stuff here */
+		.hero-plan__inner {
+			background-image: url("../../images/plan/herotablet@2x.png");
+		}
+	}
+}
+
+@include m.responsive(768px) {
+	.hero-plan__text-wrapper {
+		margin-right: auto;
+		margin-left: 0;
+		text-align: left;
+	}
+
+	.hero-plan__title {
+		margin-bottom: 24px;
+		font-size: 48px;
+	}
+}
+
+@include m.responsive(1024px) {
+	.hero-plan {
+		padding-bottom: 168px;
+	}
+
+	.hero-plan__inner {
+		padding: 134px 85px;
+	}
+
+	.hero-plan__text-wrapper {
+		max-width: 486px;
+	}
+
+	.hero-plan__title {
+		margin-bottom: 32px;
+		font-size: 72px;
+	}
+
+	.hero-plan__desc-wrapper {
+		max-width: 426px;
+	}
+
+	.hero-plan__desc {
+		font-size: 16px;
+		line-height: 26px;
+	}
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (min--moz-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-device-pixel-ratio: 2),
+		only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx) {
+		.hero-plan__inner {
+			background-image: url("../../images/plan/herodesktop@2x.png");
+		}
+	}
+}
+
+/* Plan hero styles finished */

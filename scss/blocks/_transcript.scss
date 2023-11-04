@@ -1,0 +1,107 @@
+@use "../mixins" as m;
+
+/* Transcript styles started */
+
+.transcript {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 80px 0;
+	border-radius: 10px;
+	background: #282f38;
+}
+
+.transcript__line {
+	display: none;
+}
+
+.transcript__list {
+	@include m.unstyled-list;
+	color: #fff;
+}
+
+.transcript__item {
+	text-align: center;
+	&:not(:last-child) {
+		margin-bottom: 56px;
+	}
+	&::before {
+		display: block;
+		margin-bottom: 24px;
+		font-size: 72px;
+		font-weight: 900;
+		color: #fdd6ba;
+		content: "01";
+	}
+}
+
+.transcript__item-middle::before {
+	content: "02";
+}
+
+.transcript__item--last::before {
+	content: "03";
+}
+
+.transcript__subtitle {
+	@include m.default-text(24px, 24px, 900, 114%);
+}
+
+.transcript__desc-wrapper {
+	max-width: 328px;
+	margin: 0 auto;
+}
+
+.transcript__desc {
+	@include m.default-text(0, 13px, $lh: 167%);
+	font-family: "Barlow";
+	opacity: 0.8;
+}
+
+@include m.responsive(375px) {
+	.transcript__desc {
+		font-size: 15px;
+	}
+}
+
+@include m.responsive(768px) {
+	.transcript {
+		padding: 97px 40px;
+	}
+
+	.transcript__line {
+		display: block;
+		margin-bottom: 48px;
+	}
+
+	.transcript__list {
+		@include m.layout($ai: stretch);
+		padding: 0;
+		column-gap: 10px;
+	}
+	.transcript__item {
+		max-width: 235px;
+		text-align: left;
+		&::before {
+			margin-bottom: 42px;
+			line-height: 100%;
+		}
+		&:not(:last-child) {
+			margin-bottom: 0;
+		}
+	}
+
+	.transcript__subtitle {
+		margin-bottom: 38px;
+		font-size: 28px;
+	}
+
+	.transcript__desc-wrapper {
+		max-width: 218px;
+		margin: 0;
+	}
+	.transcript__item:last-child .transcript__desc-wrapper {
+		max-width: 204px;
+	}
+}
+
+/* Transcript styles finished */
