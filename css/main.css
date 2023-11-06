@@ -2198,6 +2198,22 @@ img {
   text-align: center;
   background-color: var(--bg-color);
   border-radius: 6px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, opacity 0.3s ease;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+.drink__form-btn:disabled {
+  background-color: #e2dedb;
+}
+.drink__form-btn:hover {
+  background-color: #66d2cf;
+}
+.drink__form-btn:active {
+  opacity: 0.6;
+}
+
+.drink__form-btn-disabled:hover {
+  background-color: #e2dedb;
 }
 
 @media only screen and (min-width: 375px) {
@@ -2339,9 +2355,6 @@ img {
   .drink__router-items:active {
     opacity: 1;
   }
-  .drink__router-items:visited {
-    color: red;
-  }
   .drink__router-items::marker {
     font-size: var(--main-fz);
     color: var(--extra-color);
@@ -2373,11 +2386,18 @@ img {
             column-gap: 23px;
     margin-top: 56px;
   }
+  .drink__content-items {
+    max-width: 228px;
+  }
   .drink__order-view {
     padding: 32px 28px 84px;
   }
   .drink__order-view:hover {
     background-color: var(--extra-bg-color);
+  }
+  .drink__order-view--change {
+    padding-right: 26px;
+    padding-left: 26px;
   }
   .drink__answer {
     padding-left: 64px;
@@ -2396,11 +2416,6 @@ img {
   .drink__form-btn {
     margin-right: 0;
     margin-left: auto;
-    -webkit-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
-  }
-  .drink__form-btn:hover {
-    background-color: #66d2cf;
   }
 }
 /* Drink styles finished */

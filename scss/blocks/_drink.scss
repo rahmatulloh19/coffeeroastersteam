@@ -136,6 +136,23 @@
 	text-align: center;
 	background-color: v.$bg-color;
 	border-radius: 6px;
+	cursor: pointer;
+	transition:
+		background-color 0.3s ease,
+		opacity 0.3s ease;
+	&:disabled {
+		background-color: #e2dedb;
+	}
+	&:hover {
+		background-color: #66d2cf;
+	}
+	&:active {
+		opacity: 0.6;
+	}
+}
+
+.drink__form-btn-disabled:hover {
+	background-color: #e2dedb;
 }
 
 @include m.responsive(375px) {
@@ -261,10 +278,6 @@
 		&:active {
 			opacity: 1;
 		}
-		&:visited {
-			// opacity: 1;
-			color: red;
-		}
 		&::marker {
 			font-size: v.$main-fz;
 			color: v.$extra-color;
@@ -302,10 +315,19 @@
 		margin-top: 56px;
 	}
 
+	.drink__content-items {
+		max-width: 228px;
+	}
+
 	.drink__order-view {
 		padding: 32px 28px 84px;
 		&:hover {
 			background-color: v.$extra-bg-color;
+		}
+
+		&--change {
+			padding-right: 26px;
+			padding-left: 26px;
 		}
 	}
 
@@ -323,10 +345,6 @@
 	.drink__form-btn {
 		margin-right: 0;
 		margin-left: auto;
-		transition: background-color 0.3s ease;
-		&:hover {
-			background-color: #66d2cf;
-		}
 	}
 }
 
