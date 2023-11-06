@@ -1,15 +1,15 @@
 :root {
-  --main-ff: "Fraunces", "New Times Roman", serif;
-  --secondary-ff: "Barlow", "Arial", sans-serif;
-  --main-fw: 900;
-  --global-fw: 400;
-  --main-fz: 24px;
-  --main-color: #fefcf7;
-  --secondary-color: #333048;
-  --extra-color: #83888f;
-  --bg-color: #0e8784;
-  --inners-bg-color: #2c343e;
-  --extra-bg-color: #fdd6ba;
+	--main-ff: "Fraunces", "New Times Roman", serif;
+	--secondary-ff: "Barlow", "Arial", sans-serif;
+	--main-fw: 900;
+	--global-fw: 400;
+	--main-fz: 24px;
+	--main-color: #fefcf7;
+	--secondary-color: #333048;
+	--extra-color: #83888f;
+	--bg-color: #0e8784;
+	--inners-bg-color: #2c343e;
+	--extra-bg-color: #fdd6ba;
 }
 
 $main-ff: var(--main-ff);

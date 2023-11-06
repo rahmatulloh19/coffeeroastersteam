@@ -1,49 +1,49 @@
-@mixin layout($jc:space-between, $ai:center) {
-  display: flex;
-  justify-content: $jc;
-  align-items: $ai;
+@mixin layout($jc: space-between, $ai: center) {
+	display: flex;
+	justify-content: $jc;
+	align-items: $ai;
 }
 
 @mixin unstyled-list {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
 }
 
 @mixin unstyled-btn($p, $bgc) {
-  padding: $p;
-  border: none;
-  background-color: $bgc;
+	padding: $p;
+	border: none;
+	background-color: $bgc;
 }
 
-@mixin default-text($mb, $fz:16px, $fw:400, $lh:normal, $lt:normal) {
-  margin-top: 0;
-  margin-bottom: $mb;
-  font-size: $fz;
-  font-weight: $fw;
-  line-height: $lh;
-  letter-spacing: $lt;
+@mixin default-text($mb, $fz: 16px, $fw: 400, $lh: normal, $lt: normal) {
+	margin-top: 0;
+	margin-bottom: $mb;
+	font-size: $fz;
+	font-weight: $fw;
+	line-height: $lh;
+	letter-spacing: $lt;
 }
 
-@mixin psevdo-el($w, $h, $bgi, $bgp:center) {
-  display: block;
-  width: $w;
-  height: $h;
-  background-image: url($bgi);
-  background-repeat: no-repeat;
-  background-position: $bgp;
-  content: "";
+@mixin psevdo-el($w, $h, $bgi, $bgp: center) {
+	display: block;
+	width: $w;
+	height: $h;
+	background-image: url($bgi);
+	background-repeat: no-repeat;
+	background-position: $bgp;
+	content: "";
 }
 
 @mixin transition($property) {
-  transition-property: $property;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+	transition-property: $property;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
 }
 
 @mixin responsive($miw) {
-  @media only screen and (min-width: $miw) {
-    @content;
-  }
+	@media only screen and (min-width: $miw) {
+		@content;
+	}
 }
