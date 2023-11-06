@@ -7,6 +7,17 @@
 	padding: 120px 0;
 }
 
+.drink__router-list {
+	display: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style-type: decimal-leading-zero;
+	list-style-position: inside;
+	max-width: 250px;
+	width: 100%;
+}
+
 .drink__order-list {
 	margin-top: 0;
 	margin-bottom: 120px;
@@ -104,7 +115,7 @@
 }
 
 .drink__answer-coming {
-	@include m.default-text(0, 20px, v.$main-ff, 40px);
+	@include m.default-text(0, v.$main-fz, v.$main-ff, 40px);
 }
 
 .drink__answer-marks {
@@ -117,11 +128,12 @@
 	min-width: 217px;
 	margin: 0 auto;
 	padding: 15px 16px 16px;
-	@include m.default-text(0, 18px, 900, 25px);
+	font-size: 18px;
+	font-weight: v.$main-fw;
+	line-height: 25px;
 	border: none;
 	color: #fefcf7;
 	text-align: center;
-	text-decoration: none;
 	background-color: v.$bg-color;
 	border-radius: 6px;
 }
@@ -145,6 +157,11 @@
 @include m.responsive(768px) {
 	.drink {
 		padding: 144px 0;
+	}
+
+	.drink__form {
+		max-width: 730px;
+		margin: 0 auto;
 	}
 
 	.drink__order-list {
@@ -189,10 +206,127 @@
 	.drink__order-view {
 		padding: 32px 26px 84px;
 		flex-grow: 1;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	.drink__order-content-title {
 		margin-bottom: 24px;
+	}
+
+	.drink__answer {
+		margin-bottom: 40px;
+		padding: 27px 44px;
+	}
+
+	.drink__answer-title {
+		@include m.default-text(8px, $lh: 26px);
+		font-family: v.$secondary-ff;
+		opacity: 0.5;
+	}
+
+	.drink__answer-coming {
+		font-size: v.$main-fz;
+	}
+}
+
+@include m.responsive(1024px) {
+	.drink {
+		padding: 168px 0;
+	}
+
+	.drink__inner {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.drink__router-list {
+		position: sticky;
+		position: -webkit-sticky;
+		top: 0;
+		display: block;
+		height: 100%;
+	}
+
+	.drink__router-items {
+		padding: 24px 0;
+		border-bottom: 1px solid v.$extra-color;
+		opacity: 0.4;
+		transition: opacity 0.3s ease;
+		&:hover {
+			opacity: 0.6;
+			cursor: pointer;
+		}
+		&:active {
+			opacity: 1;
+		}
+		&:visited {
+			// opacity: 1;
+			color: red;
+		}
+		&::marker {
+			font-size: v.$main-fz;
+			color: v.$extra-color;
+		}
+	}
+
+	.drink__routers {
+		display: inline-block;
+		margin-left: 28.5px;
+		font-size: v.$main-fz;
+		font-weight: normal;
+		line-height: 32px;
+		text-decoration: none;
+		color: v.$secondary-color;
+	}
+
+	.drink__form {
+		margin: 0;
+	}
+
+	.drink__order-list {
+		margin-bottom: 88px;
+	}
+
+	.drink__order-items:not(:last-child) {
+		margin-bottom: 88px;
+	}
+
+	.drink__order-subtitle {
+		font-size: 40px;
+	}
+
+	.drink__content-list {
+		column-gap: 23px;
+		margin-top: 56px;
+	}
+
+	.drink__order-view {
+		padding: 32px 28px 84px;
+		&:hover {
+			background-color: v.$extra-bg-color;
+		}
+	}
+
+	.drink__answer {
+		padding-left: 64px;
+		padding-right: 64px;
+	}
+
+	.drink__answer-title {
+		@include m.default-text(8px, $lh: 26px);
+		font-family: v.$secondary-ff;
+		opacity: 0.5;
+	}
+
+	.drink__form-btn {
+		margin-right: 0;
+		margin-left: auto;
+		transition: background-color 0.3s ease;
+		&:hover {
+			background-color: #66d2cf;
+		}
 	}
 }
 

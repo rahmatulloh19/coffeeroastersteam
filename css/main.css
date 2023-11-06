@@ -187,7 +187,7 @@ template {
   --global-fw: 400;
   --main-fz: 24px;
   --main-color: #fefcf7;
-  --secondary-color: #333048;
+  --secondary-color: #333d4b;
   --extra-color: #83888f;
   --bg-color: #0e8784;
   --inners-bg-color: #2c343e;
@@ -202,6 +202,7 @@ template {
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -2030,6 +2031,17 @@ img {
   padding: 120px 0;
 }
 
+.drink__router-list {
+  display: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside;
+  max-width: 250px;
+  width: 100%;
+}
+
 .drink__order-list {
   margin-top: 0;
   margin-bottom: 120px;
@@ -2162,7 +2174,7 @@ img {
 .drink__answer-coming {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 20px;
+  font-size: var(--main-fz);
   font-weight: var(--main-ff);
   line-height: 40px;
   letter-spacing: normal;
@@ -2178,16 +2190,12 @@ img {
   min-width: 217px;
   margin: 0 auto;
   padding: 15px 16px 16px;
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 18px;
-  font-weight: 900;
+  font-weight: var(--main-fw);
   line-height: 25px;
-  letter-spacing: normal;
   border: none;
   color: #fefcf7;
   text-align: center;
-  text-decoration: none;
   background-color: var(--bg-color);
   border-radius: 6px;
 }
@@ -2208,6 +2216,10 @@ img {
 @media only screen and (min-width: 768px) {
   .drink {
     padding: 144px 0;
+  }
+  .drink__form {
+    max-width: 730px;
+    margin: 0 auto;
   }
   .drink__order-list {
     margin-bottom: 144px;
@@ -2271,8 +2283,124 @@ img {
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
+  .drink__order-view:hover {
+    cursor: pointer;
+  }
   .drink__order-content-title {
     margin-bottom: 24px;
+  }
+  .drink__answer {
+    margin-bottom: 40px;
+    padding: 27px 44px;
+  }
+  .drink__answer-title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: normal;
+    font-family: var(--secondary-ff);
+    opacity: 0.5;
+  }
+  .drink__answer-coming {
+    font-size: var(--main-fz);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .drink {
+    padding: 168px 0;
+  }
+  .drink__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .drink__router-list {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    display: block;
+    height: 100%;
+  }
+  .drink__router-items {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--extra-color);
+    opacity: 0.4;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+  .drink__router-items:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+  .drink__router-items:active {
+    opacity: 1;
+  }
+  .drink__router-items:visited {
+    color: red;
+  }
+  .drink__router-items::marker {
+    font-size: var(--main-fz);
+    color: var(--extra-color);
+  }
+  .drink__routers {
+    display: inline-block;
+    margin-left: 28.5px;
+    font-size: var(--main-fz);
+    font-weight: normal;
+    line-height: 32px;
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+  .drink__form {
+    margin: 0;
+  }
+  .drink__order-list {
+    margin-bottom: 88px;
+  }
+  .drink__order-items:not(:last-child) {
+    margin-bottom: 88px;
+  }
+  .drink__order-subtitle {
+    font-size: 40px;
+  }
+  .drink__content-list {
+    -webkit-column-gap: 23px;
+       -moz-column-gap: 23px;
+            column-gap: 23px;
+    margin-top: 56px;
+  }
+  .drink__order-view {
+    padding: 32px 28px 84px;
+  }
+  .drink__order-view:hover {
+    background-color: var(--extra-bg-color);
+  }
+  .drink__answer {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+  .drink__answer-title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: normal;
+    font-family: var(--secondary-ff);
+    opacity: 0.5;
+  }
+  .drink__form-btn {
+    margin-right: 0;
+    margin-left: auto;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+  }
+  .drink__form-btn:hover {
+    background-color: #66d2cf;
   }
 }
 /* Drink styles finished */
